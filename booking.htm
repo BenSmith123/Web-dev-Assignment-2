@@ -1,0 +1,193 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML"> 
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<html xmlns = "http://www.w3.org/1999/xhtml">
+	<script type="text/javascript" src="xhrHttpRequest.js"> </script>
+    <script type="text/javascript" src="sendData.js"> </script>
+	<link rel = "stylesheet" type = "text/css" href = "style.css"/>
+	
+<head>
+	<title>Cabs Online</title>
+</head>
+
+<body>
+    <div class="container">
+	<div class="header">
+    <h1>Taxi Booking System</h1> </div>
+	
+	<table><form>
+	<p><label>Name: <input type="text" name ="namefield"/></label></p>
+	
+	<p><label>Phone:  <input type="text" name ="phone"/></label></p>
+	
+	<p><h2>Pick-up Address</h2></p>
+	
+	<p><label>Suburb:
+	
+	<select type="text" name="pickup_suburb">
+		<option value="Arch Hill">Arch Hill</option>
+		<option value="Avondale">Avondale</option>
+		<option value="Blockhouse Bay">Blockhouse Bay</option>
+		<option value="Balmoral">Balmoral</option>
+		<option value="Eden Terrace">Eden Terrace</option>
+		<option value="Eden Valley">Eden Valley</option>
+		<option value="Ellerslie">Ellerslie</option>
+		<option value="Epsom">Epsom</option>
+		<option value="Freemans Bay">Freemans Bay</option>
+		<option value="Glendowie">Glendowie</option>
+		<option value="Glen Innes">Glen Innes</option>
+		<option value="Grafton">Grafton</option>
+		<option value="Greenlane">Greenlane</option>
+		<option value="Greenwoods Corner">Greenwoods Corner</option>
+		<option value="Grey Lynn">Grey Lynn</option>
+		<option value="Herne Bay">Herne Bay</option>
+		<option value="Hillsborough">Hillsborough</option>
+		<option value="Kingsland">Kingsland</option>
+		<option value="Kohimarama">Kohimarama</option>
+		<option value="Lynfield">Lynfield</option>
+		<option value="Meadowbank">Meadowbank</option>
+		<option value="Mission Bay">Mission Bay</option>
+		<option value="Morningside">Morningside</option>
+		<option value="Mount Albert">Mount Albert</option>
+		<option value="Mount Eden">Mount Eden</option>
+		<option value="Mount Roskill">Mount Roskill</option>
+		<option value="Mount Wellington">Mount Wellington</option>
+		<option value="Newmarket">Newmarket</option>
+		<option value="Newton">Newton</option>
+		<option value="New Windsor">New Windsor</option>
+		<option value="Onehunga">Onehunga</option>
+		<option value="One Tree Hill">One Tree Hill</option>
+		<option value="Orakei">Orakei</option>
+		<option value="Oranga">Oranga</option>
+		<option value="Otahuhu">Otahuhu</option>
+		<option value="Owairaka">Owairaka</option>
+		<option value="Panmure">Panmure</option>
+		<option value="Parnell">Parnell</option>
+		<option value="Penrose">Penrose</option>
+		<option value="Point England">Point England</option>
+		<option value="Point Chevalier">Point Chevalier</option>
+		<option value="Ponsonby">Ponsonby</option>
+		<option value="Remuera">Remuera</option>
+		<option value="Royal Oak">Royal Oak</option>
+		<option value="Saint Heliers">Saint Heliers</option>
+		<option value="Saint Johns">Saint Johns</option>
+		<option value="Saint Marys Bay">Saint Marys Bay</option>
+		<option value="Sandringham">Sandringham</option>
+		<option value="Stonefields">Stonefields</option>
+		<option value="Tamaki">Tamaki</option>
+		<option value="Te Papapa">Te Papapa</option>
+		<option value="Three Kings">Three Kings</option>
+		<option value="Waikowhai">Waikowhai</option>
+		<option value="Waterview">Waterview</option>
+		<option value="Western Springs">Western Springs</option>
+		<option value="Westfield">Westfield</option>
+		<option value="Westmere">Westmere</option>
+	</select></label></p>	
+		
+	<p><label>Street Name:  <input type="string" name ="pickup_street_name"/></label></p>
+		
+	<p><label>Street Number: <input type="string" name ="pickup_street_number"/></label></p>	
+	
+	<p><label>Unit Number (if applicable): <input type="string" name ="pickup_unit_number"/></label></p>	
+	
+	<!-- <script language="javascript">
+	 var today = new Date();
+	 document.write(today.getDay());
+	 </script> -->
+	
+	<!-- THIS APPEARS AS A TEXT INPUT IN FIREFOX RATHER THAN A DATE/TIME PICKER-->
+	<p><label>Date:  <input type="date" name = "pickup_date" min="2017-06-02" max="2017-09-02" placeholder="dd/mm/yyyy"/></label></p>
+	<p><label>Time:  <input type="time" name = "pickup_time" placeholder="hh:mm am"/></label></p>
+
+	<p><h2>Destination Address</h2></p>
+	
+	<p><label>Suburb:
+	
+	<select type="string" name="dropoff_suburb">
+		<option value="Arch Hill">Arch Hill</option>
+		<option value="Avondale">Avondale</option>
+		<option value="Blockhouse Bay">Blockhouse Bay</option>
+		<option value="Balmoral">Balmoral</option>
+		<option value="Eden Terrace">Eden Terrace</option>
+		<option value="Eden Valley">Eden Valley</option>
+		<option value="Ellerslie">Ellerslie</option>
+		<option value="Epsom">Epsom</option>
+		<option value="Freemans Bay">Freemans Bay</option>
+		<option value="Glendowie">Glendowie</option>
+		<option value="Glen Innes">Glen Innes</option>
+		<option value="Grafton">Grafton</option>
+		<option value="Greenlane">Greenlane</option>
+		<option value="Greenwoods Corner">Greenwoods Corner</option>
+		<option value="Grey Lynn">Grey Lynn</option>
+		<option value="Herne Bay">Herne Bay</option>
+		<option value="Hillsborough">Hillsborough</option>
+		<option value="Kingsland">Kingsland</option>
+		<option value="Kohimarama">Kohimarama</option>
+		<option value="Lynfield">Lynfield</option>
+		<option value="Meadowbank">Meadowbank</option>
+		<option value="Mission Bay">Mission Bay</option>
+		<option value="Morningside">Morningside</option>
+		<option value="Mount Albert">Mount Albert</option>
+		<option value="Mount Eden">Mount Eden</option>
+		<option value="Mount Roskill">Mount Roskill</option>
+		<option value="Mount Wellington">Mount Wellington</option>
+		<option value="Newmarket">Newmarket</option>
+		<option value="Newton">Newton</option>
+		<option value="New Windsor">New Windsor</option>
+		<option value="Onehunga">Onehunga</option>
+		<option value="One Tree Hill">One Tree Hill</option>
+		<option value="Orakei">Orakei</option>
+		<option value="Oranga">Oranga</option>
+		<option value="Otahuhu">Otahuhu</option>
+		<option value="Owairaka">Owairaka</option>
+		<option value="Panmure">Panmure</option>
+		<option value="Parnell">Parnell</option>
+		<option value="Penrose">Penrose</option>
+		<option value="Point England">Point England</option>
+		<option value="Point Chevalier">Point Chevalier</option>
+		<option value="Ponsonby">Ponsonby</option>
+		<option value="Remuera">Remuera</option>
+		<option value="Royal Oak">Royal Oak</option>
+		<option value="Saint Heliers">Saint Heliers</option>
+		<option value="Saint Johns">Saint Johns</option>
+		<option value="Saint Marys Bay">Saint Marys Bay</option>
+		<option value="Sandringham">Sandringham</option>
+		<option value="Stonefields">Stonefields</option>
+		<option value="Tamaki">Tamaki</option>
+		<option value="Te Papapa">Te Papapa</option>
+		<option value="Three Kings">Three Kings</option>
+		<option value="Waikowhai">Waikowhai</option>
+		<option value="Waterview">Waterview</option>
+		<option value="Western Springs">Western Springs</option>
+		<option value="Westfield">Westfield</option>
+		<option value="Westmere">Westmere</option>
+	</select></p></label>
+		
+	<p><label>Street Name: <input type="string" name ="dropoff_street_name"/></label></p>	
+	
+	<p><label>Street Number: <input type="string" name ="dropoff_street_number"/> </label></p>
+		
+	<!-- <input name="submit" type = "submit" value = "Fetch from server"> <!-- DEBUG -->
+	
+	<input name="submit" type = "button" onClick = "getData('processRequest.php','targetDiv', 
+	namefield.value, 
+	phone.value, 
+	pickup_suburb.value, 
+	pickup_street_name.value,
+	pickup_street_number.value,
+	pickup_unit_number.value,
+	pickup_date.value,
+	dropoff_suburb.value,
+	dropoff_street_name.value,
+	dropoff_street_number.value,
+	pickup_time.value) " 
+	value = "Book Taxi">
+
+	</form></table>
+
+	<div id="targetDiv"> <p>    </p> </div> <!-- this is where the content goes! -->
+	
+</body>
+		
+</html>
+

@@ -1,0 +1,68 @@
+/* This is the CSS for web development - assignment 2 */
+
+div.container {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 75%;
+    border: 10px solid black;
+	color: white;
+	float: CENTER;
+	text-align: center;
+	background: -webkit-linear-gradient(top, #0039ad 0%,#0076ff 50%,#4faeff 60%,#0076ff 100%);
+	display: block;
+	overflow: hidden;
+	padding: 20px;
+}
+
+div.containerText{
+	text-align: left;
+	margin: 20px;
+}
+
+div.header {
+	color: white;
+	font-size: 24px;
+}
+
+div.nav_bar {
+	float: CENTER;
+    color: white;
+    margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	padding: 15px 32px;
+	border-color: red;
+}
+
+form {
+	display: table;
+	margin: 0 auto;
+	float: CENTER;
+}
+p {display: table-row;}
+
+label {
+	display: table-cell;
+	text-align: left;
+}
+
+input {
+	border-radius: 4px;
+	display: table-cell; 
+	margin: 5px;
+}
+
+div.bodyText{
+	text-align: center;
+	margin: 20px;
+}
+
+table, th, td {
+	margin: 0 auto;
+	float: CENTER;
+    border: 1px solid black;
+    color: black;
+    border-color: black;
+    background-color: 87d8ff;
+}
+

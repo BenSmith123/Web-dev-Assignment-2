@@ -1,0 +1,35 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML"> 
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<html xmlns = "http://www.w3.org/1999/xhtml">
+	<script type="text/javascript" src="xhrHttpRequest.js"> </script>
+    <script type="text/javascript" src="getPickupRequests.js"> </script>
+	<link rel = "stylesheet" type = "text/css" href = "style.css"/>
+	
+<head>
+	<style> div.container {width: 95%;} </style> <!-- override the current CSS to make this page larger -->
+	<title>Admin: Cabs online</title>
+</head>
+
+<body>
+    <div class="container">
+	<div class="header">
+    <h1>Administrator for Cabs online</h1> </div>
+		
+	<!-- <input name="submit" type = "button" value = "Show pick-up requests" onClick = "appendRow();"/> -->
+	<form><input name="submit" name="submit" type = "button" onClick = "getPickupRequests('getRequestsFromDB.php', 'targetDiv')" value = "Show pick-up requests"/></form>
+
+	<table id= "tbl" border="1"></table> <!-- this is where the TABLE text goes -->
+	
+	<div id="targetDiv"><p>    </p></div> <!-- this is where the RESPONSE text goes -->
+	
+<form>
+	<label><input type="text" name ="textInput" autocomplete="off" placeholder ="Reference No."/></label>
+	<input name="submit" value="Assign Taxi" type = "button" onClick="assignTaxi('assignTaxi.php', 'targetDiv2', textInput.value)" /></form>
+	
+	<div id="targetDiv2"><p>    </p></div> <!-- this is where the RESPONSE text goes -->
+	
+</body>
+</html>
+
+
